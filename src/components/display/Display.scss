@@ -52,5 +52,10 @@
         color: $cyan-vd;
 
         border-radius: 4px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $gr-cyan-l;
+        }
     }
 }
