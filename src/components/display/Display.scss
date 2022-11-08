@@ -26,11 +26,11 @@
     &__label{
         &-amt{
             color: $white;
-            font-size: 12px;
+            font-size: 14px;
         }
 
         &-person{
-            font-size: 10px;
+            font-size: 12px;
         }
     }
 
@@ -43,6 +43,7 @@
         background-color: $gr-cyan;
         font-family: 'Space Mono', monospace;
         font-weight: 700;
+        font-size: 16px;
         outline: none;
         border: none;
 
