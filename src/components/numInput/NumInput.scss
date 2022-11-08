@@ -1,0 +1,54 @@
+.input{
+    font-weight: 700;nt
+
+    &__label{
+        font-size: 12px;
+        line-height: 12px;
+        padding: 0;
+    }
+
+    &__grp{
+        position: relative;
+        margin-top: 8px;
+    }
+
+    &__icon{
+        position: absolute;
+        color: $gr-cyan;
+        top: 12px;
+        left: 12px;
+    }
+
+    &__box{
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
+        text-align: right;
+        background-color: $gr-cyan-vl;
+        border: none;
+        font-size: 24px;
+        padding: 2px 12px;
+
+        border-radius: 4px;
+
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &::placeholder{
+            color: $gr-cyan;
+        }
+
+        &:focus{
+            outline: 2px solid $gr-cyan;
+        }
+
+        &:hover{
+            outline: 2px solid $gr-cyan-d;
+        }
+    }
+}
+
+#input__label{
+    font-size: 12px;
+}
