@@ -11,10 +11,45 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
+
+        color: $gr-cyan;
+        font-weight: 700;
+
+        margin-bottom: 48px;
     }
 
     &__labels{
         display: flex;
         flex-direction: column;
+    }
+
+    &__label{
+        &-amt{
+            color: $white;
+            font-size: 12px;
+        }
+
+        &-person{
+            font-size: 10px;
+        }
+    }
+
+    &__value{
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    &__reset{
+        background-color: $gr-cyan;
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
+        outline: none;
+        border: none;
+
+        padding: 8px;
+
+        color: $cyan-vd;
+
+        border-radius: 4px;
     }
 }
