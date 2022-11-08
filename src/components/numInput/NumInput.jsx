@@ -1,7 +1,11 @@
 const NumInput = () => {
     return(
         <div>
-            NumInput
+            <label>Bill</label>
+            <section>
+                
+                <input type="text" />
+            </section>
         </div>
     )
 }
