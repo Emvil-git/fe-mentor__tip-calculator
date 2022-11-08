@@ -1,11 +1,31 @@
 import { PersonFill, CurrencyDollar } from 'react-bootstrap-icons';
 
-const NumInput = () => {
+const NumInput = ({type}) => {
+
+    const handleLabel = () => {
+        switch(type) {
+            case 'bill':
+                return "Bill";
+            case 'people':
+                return "No. of People"
+        }
+    }
+
+    const handleIcon = () => {
+        switch(type) {
+            case 'bill':
+                return <CurrencyDollar className='input__icon'/>
+            case 'people':
+                return <PersonFill className='input__icon'/>
+        }
+    }
+
     return(
         <div className='input'>
-            <label id='input__label'>Bill</label>
+            <label id='input__label'>{handleLabel()}</label>
             <section className='input__grp'>
-                <CurrencyDollar className='input__icon'/>
+                {handleIcon()}
+                {/* <CurrencyDollar className='input__icon'/> */}
                 <input placeholder='0' type="number" className='input__box'/>
             </section>
         </div>

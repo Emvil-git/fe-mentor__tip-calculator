@@ -9,9 +9,9 @@ function App() {
     <div className="App">
       <main className="cont">
         <section className='cont__input-sect'>
-          <NumInput/>
+          <NumInput type="bill"/>
           <TipInput/>
-          <NumInput/>
+          <NumInput type="people"/>
         </section>
 
         <Display/>
