@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 @import './_styling_vars.scss';
+@import './components/display/Display.scss';
+@import './components/numInput/NumInput.scss';
+@import './components/tipInput/TipInput.scss';
 
 
 *{

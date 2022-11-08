@@ -1,0 +1,20 @@
+.display{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: $cyan-vd;
+    border-radius: 12px;
+    padding: 36px;
+
+    &__wrap{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__labels{
+        display: flex;
+        flex-direction: column;
+    }
+}
