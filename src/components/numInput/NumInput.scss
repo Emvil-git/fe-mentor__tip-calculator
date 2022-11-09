@@ -1,6 +1,12 @@
 .input{
     font-weight: 700;nt
 
+    &__labels{
+        display: flex;
+        width: 100%;
+        align-content: space-between;
+    }
+
     &__label{
         font-size: 14px;
         line-height: 14px;
@@ -46,10 +52,58 @@
         &:hover{
             outline: 2px solid $gr-cyan-d;
         }
+
+        &:invalid{
+            outline: 2px solid red;
+        }
     }
 }
 
-#input__label{
+#input__labels{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 38px;
+}
+
+#input__label, #input__error{
     font-size: 14px;
     color: $gr-cyan-d;
+}
+
+#input__error{
+    color: red;
+}
+
+#bill-input, #diners-input{
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    text-align: right;
+    background-color: $gr-cyan-vl;
+    border: none;
+    font-size: 24px;
+    padding: 4px 12px;
+
+    border-radius: 4px;
+
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &::placeholder{
+        color: $gr-cyan;
+    }
+
+    &:focus{
+        outline: 2px solid $gr-cyan;
+    }
+
+    &:hover{
+        outline: 2px solid $gr-cyan-d;
+    }
+
+    &:invalid{
+        outline: 2px solid red;
+    }
 }

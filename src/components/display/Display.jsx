@@ -9,7 +9,7 @@ const Display = ({bill, setBill, tip, setTip, diners, setDiners}) => {
     }
 
     const handleTip = () => {
-        if (bill !== undefined && diners !== undefined && diners !== 0) {
+        if (!isNaN(bill) && !isNaN(diners) && diners !== 0) {
             if (tip === undefined) {
                 return '$0'
             }
@@ -20,7 +20,7 @@ const Display = ({bill, setBill, tip, setTip, diners, setDiners}) => {
     }
 
     const handleTotal = () => {
-        if (bill !== undefined && diners !== undefined && diners !== 0) {
+        if (!isNaN(bill) && !isNaN(diners) && diners !== 0) {
             if (tip === undefined) {
                 const indivTotal = bill/diners
                 return `$${indivTotal.toFixed(2)}`

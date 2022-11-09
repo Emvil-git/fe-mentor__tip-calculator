@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { PersonFill, CurrencyDollar } from 'react-bootstrap-icons';
 
 const NumInput = ({type, sVar, setSVar}) => {
+
+    const [isInvalid, setIsInvalid] = useState(false);
 
     const handleLabel = () => {
         switch(type) {
@@ -8,6 +11,26 @@ const NumInput = ({type, sVar, setSVar}) => {
                 return "Bill";
             case 'people':
                 return "Number of People"
+        }
+    }
+
+    const handleId = () =>{
+        switch(type) {
+            case 'bill':
+                return "bill-input";
+            case 'people':
+                return "diners-input"
+        }
+    }
+
+    const handleValidity = () => {
+        const input = document.querySelector('#diners-input')
+        if (type === 'people' && input.value == 0) {
+            input.setCustomValidity("no diners")
+            setIsInvalid(true)
+        } else {
+            input.setCustomValidity("");
+            setIsInvalid(false)
         }
     }
 
@@ -27,7 +50,10 @@ const NumInput = ({type, sVar, setSVar}) => {
 
     return(
         <div className='input'>
-            <label id='input__label'>{handleLabel()}</label>
+            <section id='input__labels'>
+                <label id='input__label'>{handleLabel()}</label>
+                {isInvalid && <label id='input__error'>Can't be Zero</label>}
+            </section>
             <section className='input__grp'>
                 {handleIcon()}
                 {/* <CurrencyDollar className='input__icon'/> */}
@@ -36,7 +62,8 @@ const NumInput = ({type, sVar, setSVar}) => {
                 type="number"
                 value={handleVal()}
                 onChange={ev => setSVar(parseFloat(ev.target.value))}
-                className='input__box'/>
+                onInput={() => handleValidity()}
+                id={handleId()}/>
             </section>
         </div>
     )
