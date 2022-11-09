@@ -40,6 +40,11 @@
             background-color: $gr-cyan-d;
         }
 
+        &--selected{
+            background-color: $cyan-str;
+            color: $cyan-vd;
+        }
+
         &--custom{
             font-family: 'Space Mono', monospace;
             color: $cyan-vd;

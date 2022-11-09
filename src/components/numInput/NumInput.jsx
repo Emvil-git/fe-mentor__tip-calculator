@@ -1,13 +1,13 @@
 import { PersonFill, CurrencyDollar } from 'react-bootstrap-icons';
 
-const NumInput = ({type}) => {
+const NumInput = ({type, sVar, setSVar}) => {
 
     const handleLabel = () => {
         switch(type) {
             case 'bill':
                 return "Bill";
             case 'people':
-                return "No. of People"
+                return "Number of People"
         }
     }
 
@@ -26,7 +26,12 @@ const NumInput = ({type}) => {
             <section className='input__grp'>
                 {handleIcon()}
                 {/* <CurrencyDollar className='input__icon'/> */}
-                <input placeholder='0' type="number" className='input__box'/>
+                <input
+                placeholder='0'
+                type="number"
+                value={sVar}
+                onChange={ev => setSVar(ev.target.value)}
+                className='input__box'/>
             </section>
         </div>
     )

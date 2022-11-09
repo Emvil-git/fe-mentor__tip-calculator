@@ -23,6 +23,8 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0,1fr));
 
+  box-shadow: 0 4px 40px 1px $gr-cyan;
+
   &__input-sect{
     display: flex;
     flex-direction: column;
