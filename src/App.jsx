@@ -10,6 +10,8 @@ function App() {
   const [diners, setDiners] = useState();
   const [tip, setTip] = useState();
 
+  console.log(typeof bill)
+
   return (
     <div className="App">
       <main className="cont">
@@ -19,7 +21,14 @@ function App() {
           <NumInput type="people" sVar={diners} setSVar={setDiners}/>
         </section>
 
-        <Display/>
+        <Display
+        bill={bill}
+        setBill={setBill}
+        diners={diners}
+        setDiners={setDiners}
+        tip={tip}
+        setTip={setTip}
+        />
       </main>
     </div>
   );

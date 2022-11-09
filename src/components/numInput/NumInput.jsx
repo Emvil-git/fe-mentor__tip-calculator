@@ -20,6 +20,11 @@ const NumInput = ({type, sVar, setSVar}) => {
         }
     }
 
+    const handleVal = () => {
+        if(sVar === undefined) return ''
+        return sVar
+    }
+
     return(
         <div className='input'>
             <label id='input__label'>{handleLabel()}</label>
@@ -29,8 +34,8 @@ const NumInput = ({type, sVar, setSVar}) => {
                 <input
                 placeholder='0'
                 type="number"
-                value={sVar}
-                onChange={ev => setSVar(ev.target.value)}
+                value={handleVal()}
+                onChange={ev => setSVar(parseFloat(ev.target.value))}
                 className='input__box'/>
             </section>
         </div>
