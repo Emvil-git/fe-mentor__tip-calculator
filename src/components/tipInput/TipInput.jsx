@@ -14,6 +14,14 @@ const TipInput = ({tip, setTip}) => {
         }
     }
 
+    const handleCustom = (val) => {
+        if (!isNaN(val) && val < 100) {
+            setTip(val/100)
+        } else {
+            setTip()
+        }
+    }
+
     return(
         <div className="tip">
             <label  className="tip__label">Select Tip %</label>
@@ -23,7 +31,7 @@ const TipInput = ({tip, setTip}) => {
                 <option className={selectTip(.15)} value={.15} onClick={ev => handleClick(parseFloat(ev.target.value))}>15%</option>
                 <option className={selectTip(.25)} value={.25} onClick={ev => handleClick(parseFloat(ev.target.value))}>25%</option>
                 <option className={selectTip(.5)} value={.5} onClick={ev => handleClick(parseFloat(ev.target.value))}>50%</option>
-                <input className="tip__option tip__option--custom" type="number" placeholder="Custom"/>
+                <input className="tip__option tip__option--custom" onChange={ev => handleCustom(parseInt(ev.target.value))} type="number" placeholder="Custom"/>
             </section>
         </div>
     )
