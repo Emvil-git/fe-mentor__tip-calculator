@@ -59,3 +59,50 @@
         }
     }
 }
+
+@media only screen and (max-width: 760px) {
+    .display{
+        padding: 36px 10%;
+
+        &__wrap{
+            flex-direction: column;
+            margin-bottom: 24px;
+        }
+
+        &__labels{
+            margin-bottom: 8px;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .display{
+        margin-top: 32px;
+        padding: 36px 8%;
+
+        &__wrap{
+            flex-direction: row;
+            margin-bottom: 24px;
+        }
+
+        &__labels{
+            margin-bottom: 8px;
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .display{
+        
+        padding: 32px;
+
+        &__wrap{
+            flex-direction: column;
+            margin-bottom: 24px;
+        }
+
+        &__labels{
+            margin-bottom: 8px;
+        }
+    }
+}

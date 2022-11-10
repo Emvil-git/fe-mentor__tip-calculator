@@ -1,5 +1,9 @@
 .input{
-    font-weight: 700;nt
+    font-weight: 700;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
 
     &__labels{
         display: flex;
@@ -14,6 +18,7 @@
     }
 
     &__grp{
+        display: flex;
         position: relative;
         margin-top: 8px;
     }
@@ -33,6 +38,7 @@
         border: none;
         font-size: 24px;
         padding: 4px 12px;
+        width: 100%;
 
         border-radius: 4px;
 
@@ -83,7 +89,8 @@
     border: none;
     font-size: 24px;
     padding: 4px 12px;
-
+    width: 100%;
+    margin-right: 36px;
     border-radius: 4px;
 
     &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
@@ -105,5 +112,11 @@
 
     &:invalid{
         outline: 2px solid red;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #bill-input, #diners-input{
+        margin-right: 0;
     }
 }

@@ -76,3 +76,17 @@
         }
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .tip__options{
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .tip__options{
+        margin-right: 0;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        grid-template-rows: repeat(3, minmax(0,1fr));
+    }
+}
