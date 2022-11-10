@@ -12,6 +12,18 @@
 
 }
 
+#logo{
+  font-size: 24px;
+  font-weight: 700;
+  width: 120px;
+  word-break: break-word;
+  text-align: center;
+  margin-bottom: 4%;
+  margin-top: -3%;
+  letter-spacing: 12px;
+  color: $gr-cyan-d;
+}
+
 .cont{
   width: max-content;
   width: 760px;
@@ -31,5 +43,11 @@
     justify-content: space-between;
     padding: 8px 0;
   }
+}
+
+.attribution{
+  position: absolute;
+  font-size: 12px;
+  bottom: 1%;
 }
 

@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <span id="logo">SPLITTER</span>
       <main className="cont">
         <section className='cont__input-sect'>
           <NumInput type="bill" sVar={bill} setSVar={setBill}/>
@@ -33,6 +34,11 @@ function App() {
         setCustomTip={setCustomTip}
         />
       </main>
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded with ♥ by <a href="https://github.com/Emvil-git" target="_blank">Emvil</a>.
+      </div>
     </div>
   );
 }
