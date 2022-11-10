@@ -9,6 +9,7 @@ function App() {
   const [bill, setBill] = useState();
   const [diners, setDiners] = useState();
   const [tip, setTip] = useState();
+  const [customTip, setCustomTip] = useState();
 
   console.log(typeof bill)
 
@@ -17,7 +18,7 @@ function App() {
       <main className="cont">
         <section className='cont__input-sect'>
           <NumInput type="bill" sVar={bill} setSVar={setBill}/>
-          <TipInput tip={tip} setTip={setTip}/>
+          <TipInput tip={tip} setTip={setTip} customTip={customTip} setCustomTip={setCustomTip}/>
           <NumInput type="people" sVar={diners} setSVar={setDiners}/>
         </section>
 
@@ -28,6 +29,8 @@ function App() {
         setDiners={setDiners}
         tip={tip}
         setTip={setTip}
+        customTip={customTip}
+        setCustomTip={setCustomTip}
         />
       </main>
     </div>

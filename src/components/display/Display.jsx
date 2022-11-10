@@ -1,11 +1,12 @@
 import { HandIndexFill } from "react-bootstrap-icons"
 
-const Display = ({bill, setBill, tip, setTip, diners, setDiners}) => {
+const Display = ({bill, setBill, tip, setTip, diners, setDiners, customTip, setCustomTip}) => {
 
     const reset = () => {
         setBill()
         setTip()
         setDiners()
+        setCustomTip()
     }
 
     const handleTip = () => {

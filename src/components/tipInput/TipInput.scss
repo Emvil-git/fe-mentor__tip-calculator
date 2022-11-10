@@ -69,9 +69,10 @@
             }
 
             &::placeholder{
-                
+                color: $gr-cyan;
                 text-align: center;
             }
+
         }
     }
 }
